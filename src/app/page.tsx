@@ -7,7 +7,7 @@ import { Link } from '@/components/Link/Link';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher/LocaleSwitcher';
 import { Page } from '@/components/Page';
 
-import nexhireLogo from './_assets/nexhire-logo.png';
+import nexjobLogo from './_assets/NEXJOB.png';
 
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
     <Page back={false}>
       {/* Nexhire logo at the top */}
       <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-        <img src={nexhireLogo.src} alt="Nexhire Logo" style={{ width: '150px', height: 'auto' }} />
+        <img src={nexjobLogo.src} alt="Nexhire Logo" style={{ width: '150px', height: 'auto' }} />
       </div>
       <List>
         <Section header="Welcome to Nexhire">
