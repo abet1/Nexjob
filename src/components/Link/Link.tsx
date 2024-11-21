@@ -1,7 +1,6 @@
+import { openLink, classNames } from '@telegram-apps/sdk-react';
 import { type FC, type MouseEventHandler, type JSX, useCallback } from 'react';
 import { type LinkProps as NextLinkProps, default as NextLink } from 'next/link';
-
-import { getWebApp } from '@/utils/getWebApp';
 
 import './styles.css';
 
@@ -34,7 +33,7 @@ export const Link: FC<LinkProps> = ({
 
     if (isExternal) {
       e.preventDefault();
-      getWebApp().openLink(targetUrl.toString());
+      openLink(targetUrl.toString());
     }
   }, [href, propsOnClick]);
 
@@ -43,7 +42,7 @@ export const Link: FC<LinkProps> = ({
       {...rest}
       href={href}
       onClick={onClick}
-      className={[className, 'link'].filter(Boolean).join(' ')}
+      className={classNames(className, 'link')}
     />
   );
 };

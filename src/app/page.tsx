@@ -1,41 +1,94 @@
 'use client';
 
 import { Section, Cell, Image, List } from '@telegram-apps/telegram-ui';
+import { useTranslations } from 'next-intl';
 
 import { Link } from '@/components/Link/Link';
+import { LocaleSwitcher } from '@/components/LocaleSwitcher/LocaleSwitcher';
+import { Page } from '@/components/Page';
 
-import tonSvg from './_assets/ton.svg';
+import nexhireLogo from './_assets/nexhire-logo.png';
+
 
 export default function Home() {
   return (
-    <List>
-      <Section
-        header='Features'
-        footer='You can use these pages to learn more about features, provided by Telegram Mini Apps and other useful projects'
-      >
-        <Link href='/ton-connect'>
-          <Cell
-            before={<Image src={tonSvg.src} style={{ backgroundColor: '#007AFF' }}/>}
-            subtitle='Connect your TON wallet'
-          >
-            TON Connect
+    <Page back={false}>
+      {/* Nexhire logo at the top */}
+      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+        <img src={nexhireLogo.src} alt="Nexhire Logo" style={{ width: '150px', height: 'auto' }} />
+      </div>
+      <List>
+        <Section header="Welcome to Nexhire">
+          <Cell subtitle="Choose how you'd like to log in and get started">
+            Begin your journey with us.
           </Cell>
-        </Link>
-      </Section>
-      <Section
-        header='Application Launch Data'
-        footer='These pages help developer to learn more about current launch information'
-      >
-        <Link href='/init-data'>
-          <Cell subtitle='User data, chat information, technical data'>Init Data</Cell>
-        </Link>
-        <Link href='/launch-params'>
-          <Cell subtitle='Platform identifier, Mini Apps version, etc.'>Launch Parameters</Cell>
-        </Link>
-        <Link href='/theme-params'>
-          <Cell subtitle='Telegram application palette information'>Theme Parameters</Cell>
-        </Link>
-      </Section>
-    </List>
+        </Section>
+        <Section header="Login Options">
+          <Link href="/user-account">
+            <Cell subtitle="Explore job opportunities tailored for you">
+              Log in as Job Seeker
+            </Cell>
+          </Link>
+          <Link href="/company-account">
+            <Cell subtitle="Post job openings and find the right talent">
+              Log in as Company
+            </Cell>
+          </Link>
+        </Section>
+        <Section header="Connect with Us">
+          {/* Placeholder for social media links */}
+          <Cell subtitle="Follow us on our social media platforms to stay updated.">
+            {/* Add social media links here */}
+            <Link href="https://facebook.com/nexhire" target="_blank">
+              Facebook 
+            </Link>
+            <Link href="https://twitter.com/nexhire" target="_blank">
+              Twitter
+            </Link>
+            <Link href="https://linkedin.com/company/nexhire" target="_blank">
+              LinkedIn
+            </Link>
+            <Link href="https://instagram.com/nexhire" target="_blank">
+              Instagram
+            </Link>
+          </Cell>
+        </Section>
+      </List>
+    </Page>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

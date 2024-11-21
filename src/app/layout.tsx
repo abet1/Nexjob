@@ -1,8 +1,9 @@
-import Script from 'next/script';
 import type { PropsWithChildren } from 'react';
 import type { Metadata } from 'next';
+import { getLocale } from 'next-intl/server';
 
 import { Root } from '@/components/Root/Root';
+import { I18nProvider } from '@/core/i18n/provider';
 
 import '@telegram-apps/telegram-ui/dist/styles.css';
 import 'normalize.css/normalize.css';
@@ -13,14 +14,17 @@ export const metadata: Metadata = {
   description: 'Your application description goes here',
 };
 
-export default function RootLayout({ children }: PropsWithChildren) {
+export default async function RootLayout({ children }: PropsWithChildren) {
+  const locale = await getLocale();
+
   return (
-    <html lang="en">
+    <html lang={locale}>
     <body>
-      <Script src="https://telegram.org/js/telegram-web-app.js" strategy="afterInteractive"/>
-      <Root>
-        {children}
-      </Root>
+      <I18nProvider>
+        <Root>
+          {children}
+        </Root>
+      </I18nProvider>
     </body>
     </html>
   );
