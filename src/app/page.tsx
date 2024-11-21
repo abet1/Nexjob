@@ -9,16 +9,15 @@ import { Page } from '@/components/Page';
 
 import nexjobLogo from './_assets/NEXJOB.png';
 
-
 export default function Home() {
   return (
     <Page back={false}>
-      {/* Nexhire logo at the top */}
+      {/* Nexjob logo at the top */}
       <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-        <img src={nexjobLogo.src} alt="Nexhire Logo" style={{ width: '150px', height: 'auto' }} />
+        <img src={nexjobLogo.src} alt="Nexjob Logo" style={{ width: '150px', height: 'auto' }} />
       </div>
       <List>
-        <Section header="Welcome to Nexhire">
+        <Section header="Welcome to Nexjob">
           <Cell subtitle="Choose how you'd like to log in and get started">
             Begin your journey with us.
           </Cell>
@@ -39,16 +38,16 @@ export default function Home() {
           {/* Placeholder for social media links */}
           <Cell subtitle="Follow us on our social media platforms to stay updated.">
             {/* Add social media links here */}
-            <Link href="https://facebook.com/nexhire" target="_blank">
-              Facebook 
+            <Link href="https://facebook.com/nexjob" target="_blank">
+              Facebook
             </Link>
-            <Link href="https://twitter.com/nexhire" target="_blank">
+            <Link href="https://twitter.com/nexjob" target="_blank">
               Twitter
             </Link>
-            <Link href="https://linkedin.com/company/nexhire" target="_blank">
+            <Link href="https://linkedin.com/company/nexjob" target="_blank">
               LinkedIn
             </Link>
-            <Link href="https://instagram.com/nexhire" target="_blank">
+            <Link href="https://instagram.com/nexjob" target="_blank">
               Instagram
             </Link>
           </Cell>
@@ -57,38 +56,3 @@ export default function Home() {
     </Page>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
