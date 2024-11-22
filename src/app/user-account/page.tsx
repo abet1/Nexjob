@@ -71,21 +71,6 @@ export default function InitDataPage() {
         </div>
       )},
       { title: 'Jobs Approved', value: authDate.toLocaleString() },
-      { title: 'TON Wallet', value: (
-        <Link href="/ton-connect">
-          <Cell
-            before={
-              <Image
-                src={tonSvg.src}
-                style={{ backgroundColor: '#007AFF' }}
-              />
-            }
-            subtitle="Connect your TON wallet"
-          >
-            TON Connect
-          </Cell>
-        </Link>
-      ) },
     ];
   }, [initDataState, initDataRaw, cvFile, points]);  
 
