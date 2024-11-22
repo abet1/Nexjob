@@ -38,21 +38,20 @@ export default function CompanyProfilePage() {
       { title: 'Number of Active Job Postings', value: jobCount },
       { title: 'Date Joined', value: authDate.toLocaleString() },
       { title: 'Company Verification Status', value: 'Verified' }, // Static or dynamic
-      { title: 'Connect TON Wallet', value: (
-        <Link href="/ton-connect">
-          <Cell
-            before={
-              <Image
-                src={tonSvg.src}
-                style={{ backgroundColor: '#007AFF' }}
-              />
-            }
-            subtitle="Connect your TON wallet to manage points and rewards"
-          >
-            TON Connect
-          </Cell>
-        </Link>
-      ) },
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     ];
   }, [initDataState, initDataRaw, jobCount]);
 
